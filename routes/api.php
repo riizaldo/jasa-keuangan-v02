@@ -64,4 +64,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('/cashflows', [CashflowController::class, 'index']);
     Route::get('/cashflows/summary', [CashflowController::class, 'summary']);
+    Route::post('/cashflow/expense', [CashflowController::class, 'storeExpense']);
+    Route::get('/reports/profit-loss', [CashflowController::class, 'profitLoss']);
+    Route::get('/reports/balance-sheet', [CashflowController::class, 'balanceSheet']);
+    Route::get('/reports/changes-in-equity', [CashflowController::class, 'statementOfChangesInEquity']);
 });

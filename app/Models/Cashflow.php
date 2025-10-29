@@ -16,7 +16,9 @@ class Cashflow extends Model
         'date',
         'source_id',
         'source_type',
+    ];
 
-
+    protected $casts = [
+        'type' => 'string', // bisa juga pakai Enum class
     ];
 }
